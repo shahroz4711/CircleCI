@@ -1,17 +1,14 @@
-
-
-
 version: 2.1
 jobs:
-  test:
+  build:
     docker:
       - image: alpine:3.15
         auth:
           username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
+          password: $DOCKERHUB_PASSWORD 
     steps:
       - run:
           name: The First Step
           command: |
-            echo 'Hello wordld'
+            echo 'Hello world'
             echo 'this is the deliery pipeline'
