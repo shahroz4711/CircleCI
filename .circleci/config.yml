@@ -1,0 +1,17 @@
+
+
+
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: alpine:3.15
+        auth:
+          username:
+          password:
+    steps:
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello world'
+            echo 'this is the deliery pipeline'
